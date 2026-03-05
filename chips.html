@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/wjinternet/assets/style/chips.css">
+    <link rel="stylesheet" href="/wjinternet/assets/style/services.css">
+    <link rel="stylesheet" href="/wjinternet/assets/style/responsive.css">
+    <link rel="stylesheet" href="/wjinternet/assets/style/dark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.clipartmax.com/png/middle/44-447054_router-visio-cisco-router-icon.png" type="image/x-icon">
+    <title>Validações</title>
+</head>
+
+<body>
+    <div class="fundo" id="fundo">
+    </div>
+    <header class="header-lateral">
+        <div class="title">
+            <h3>MACVerify</h3>
+        </div>
+
+        <nav class="nav">
+            <ul class="ul-nav">
+                <li class="active li-nav" id="home">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-speedometer"></i>Home
+                    </a>
+                </li>
+
+    
+
+                <li id="equipamentos">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-router-fill"></i>Equipamentos
+                    </a>
+                </li>
+
+                <li id="boxlote">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-box"></i>Entrada em Lote
+                    </a>
+                </li>
+                <li id="veiculos">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-car-front-fill"></i>Abastecimento
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="version-pl">
+            <a href="#">Versão 1.0.0</a>
+        </div>
+    </header>
+
+    <header class="header-topo">
+        <div class="user">
+            <h3>Bem vindo, <strong id="nomeUser"></strong></h3>
+        </div>
+
+        <div class="user-profile">
+
+            <div class="config">
+                <button id="configss">
+                    <i class="fa-solid fa-wrench"></i>
+                </button>
+            </div>
+
+            <div class="notify">
+                <button id="notify">
+                    <i class="fa-solid fa-flag"></i>
+                </button>
+            </div>
+
+            <div class="moon2">
+                <button class="moon" id="moon">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="sun" id="sun">
+                    <i class="bi bi-brightness-high-fill"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="sessao-primary" id="sessao-primary">
+        <div class="sessao-master">
+
+            <div class="title-primary">
+                <h3>Dashboard</h3>
+            </div>
+
+            <!--CARD - EQUIPAMENTOS CADASTRADOS-->
+            <div class="bloco-primary cadastros-eqp">
+                <div class="bloco1">
+                    <div class="title1">
+                        <h3>Equipamentos Cadastrados</h3>
+                    </div>
+
+                    <div class="info1 huawei">
+                        <span id=""><i class="bi bi-router-fill"></i>Huawei</span>
+                        <strong id="huawei"></strong>
+                    </div>
+                    <div class="info1 china">
+                        <span><i class="bi bi-router-fill"></i>China Mobile</span>
+                        <strong id="china"></strong>
+                    </div>
+                    <div class="info1 mercusys">
+                        <span><i class="bi bi-router-fill"></i>Mercusys</span>
+                        <strong id="mercusys"></strong>
+                    </div>
+
+                    <div class="info1 tplink">
+                        <span><i class="bi bi-router-fill"></i>TP Link</span>
+                        <strong id="tl"></strong>
+                    </div>
+
+                    <div class="info1 multi">
+                        <span><i class="bi bi-router-fill"></i>MultiLaser</span>
+                        <strong id="multi"></strong>
+                    </div>
+
+                    <div class="info1 stavix">
+                        <span><i class="bi bi-router-fill"></i>STAVIX</span>
+                        <strong id="stavix"></strong>
+                    </div>
+
+                    <div class="info1 sirius">
+                        <span><i class="bi bi-router-fill"></i>XSIRIUS</span>
+                        <strong id="sirius"></strong>
+                    </div>
+
+                     <div class="info1 maxprint">
+                        <span><i class="bi bi-router-fill"></i>MAXPRINT</span>
+                        <strong id="maxprint"></strong>
+                    </div>
+
+                    <div class="info1 navigator">
+                        <span><i class="bi bi-router-fill"></i>NAVIGATOR</span>
+                        <strong id="navigator"></strong>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <!--FIM-->
+
+            <!--CARDS USUARIOS LOGADOS--
+            <div class="bloco-primary usuarios-cadastrados">
+                <div class="bloco1">
+                    <div class="title1">
+                        <h3>Carros Cadastrados</h3>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO MOBY(SP)</span>
+                        <span>SHW5C70</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO MOBY(SP)</span>
+                        <span>SIX5B53</span>
+                    </div>
+
+                     <div class="info1 users">
+                        <span>UNO MOBY(SP)</span>
+                        <span>SHE8G56</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>MONTANA(SP)</span>
+                        <span>GFV5H48</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO MOBY(GRU)</span>
+                        <span>RVU3B71</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO MOBY(GRU)</span>
+                        <span>RVU8F03</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO MOBY(GRU)</span>
+                        <span>AWY6676</span>
+                    </div>
+
+                    <div class="info1 users">
+                        <span>UNO VIVACE(GRU)</span>
+                        <span>AWY6676</span>
+                    </div>
+
+                </div>
+            </div>
+            <!--FIM-->
+
+            <div class="bloco-primary primary-versao">
+                <div class="bloco1">
+                    <div class="title1">
+                        <h3>SOBRE O SISTEMA</h3>
+                    </div>
+
+                    <div class="versao-card">
+
+                        <div class="version">
+                            <span><strong style="background-color: transparent;">❝</strong>MACVerify é um sistema desenvolvido para gerenciamento e verificação de equipamentos por meio do endereço MAC. A plataforma permite cadastrar, organizar e monitorar dispositivos de diferentes marcas, facilitando o controle e a identificação dentro da rede.<strong style="background-color: transparent;">❞</strong></span>
+                            <br>
+                            <br>
+                            <span>O sistema conta com funcionalidades como:</span>
+                        </div>
+
+                        <div class="versao-info">
+                            <ul>
+                                <li>Cadastro e listagem de equipamentos</li>
+                                <li>Adicionado funcionalidade de registrar equipamentosOrganização por marcas;</li>
+                                <li>Controle de entrada em lote</li>
+                                <li>Registro de abastecimento veicular</li>
+                                <li>Sistema de notificações</li>
+                                <li>Ferramentas administrativas</li>
+                                <li>Interface responsiva com modo Dark</li>
+                            </ul>
+                        </div>
+
+                        <!--<div class="att">
+                            <button disabled aria-label="Nao">Atualizar</button>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloco-primary primary-versao">
+                <div class="bloco1">
+                    <div class="title1">
+                        <h3>Versão Atual</h3>
+                    </div>
+
+                    <div class="versao-card">
+
+                        <div class="version">
+                            <span>Versão 1.0.0 - Atualizações</span>
+                        </div>
+
+                        <div class="versao-info">
+                            <ul>
+                                <li>Implementação do sistema;</li>
+                                <li>Ajuste de Responsividade;</li>
+                                <li>Adicionado funcionalidade de registrar equipamentos;</li>
+                                <li>Adicionado funcionalidade de controle de abastecimento veicular;</li>
+                                <li>Adicionado funcionalidade de Darkmode;</li>
+                                <li>Adicionado funcionalidade de notificações do sistema;</li>
+                                <li>Adicionado funcionalidade de ferramentas;</li>
+                                <li>Adicionado funcionalidade de registrar equipamentos;</li>
+                                
+                            </ul>
+                        </div>
+
+                        <!--<div class="att">
+                            <button disabled aria-label="Nao">Atualizar</button>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <div class="ferramentas" id="ferramentas">
+        <div class="ferramentas-title">
+            <span>Configurações do Sistema</span>
+        </div>
+
+        <div class="configs">
+            <div class="edit-user">
+                <a href="#" id="edit-perfil">Editar Perfil</a>
+            </div>
+
+            <div class="configs-">
+                <a href="#" id="configs-dashboard">Configurações</a>
+            </div>
+
+            <div class="integrations">
+                <a href="#" id="integration">Integrações</a>
+            </div>
+
+            <hr>
+
+            <div class="logout">
+                <a href="#" id="logout">Sair do sistema</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <div class="notification-title">
+            <span>Notificações do Sistema</span>
+            <hr>
+        </div>
+
+        <div class="notify-d">
+
+           
+
+            <div class="list-notify">
+                <div class="notify-n">
+                    <span>Efetuação de Login</span>
+                    <span id="date-login"></span>
+                </div>
+                <div class="notify-i" id="notify">
+                    <p id="userName"></p>
+                </div>
+            </div>
+
+            <div class="list-notify">
+                <div class="notify-n">
+                    <span>Efetuação de Login</span>
+                    
+                </div>
+                <div class="notify-i">
+                    <p>Rogério Santana - Logou com sucesso!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--SESSAO PARA CADASTRAR OS EQUIPAMENTOS-->
+    <section class="sessao-equipamentos" id="sessao-equipamentos">
+        <div class="sessao-master">
+
+            <div class="title-primary">
+                <h3>Cadastrar Equipamentos</h3>
+            </div>
+
+            <div class="bloco-primary">
+                <div class="bloco1">
+
+                    <div class="title1">
+                        <h3>Cadastro de Equipamentos</h3>
+                    </div>
+                    <div class="information">
+                        <p><i class="bi bi-exclamation-octagon-fill"></i>Preencha corretamente os campos abaixo para cadastrar o equipamento no sistema.</p>
+                    </div>
+                   
+
+                    <form id="formEquipamentos" autocomplete="off">
+                        <div class="input-group">
+
+                            <div class="input-list">
+                                <label>Mac:</label>
+                                <span class="left-i"><i class="bi bi-upc"></i></span>
+                                <input type="text" name="mac" id="mac" placeholder="00:00:00:00:00:00" maxlength="18" />
+                                
+                            </div>
+
+                            <div class="input-list">
+                                <label>Modelo:</label>
+                                <span class="left-i-top"><i class="bi bi-router-fill"></i></span>
+                                <input type="text" id="modelo" placeholder="Huawei / Mercusys / Navigator"  required/>
+                            </div>
+                            
+                    
+                            
+
+                             <div class="input-list">
+                                <label for="date">Data de Registro:</label>
+                                <span class="left-i-data-equip"><i class="bi bi-calendar2-plus-fill" for="date"></i></span>
+                                <input type="date" id="date" name="date" class="date" required/>
+                            </div>
+                             <div class="input-list">
+                                <label for="date">Região</label>
+                                 <span class="left-i-region-equip"><i class="bi bi-geo-alt-fill"></i></span>
+                                <input list="regiaoo" id="regiao"  name="regiao" placeholder="SP / GRU / FR" required/>
+                                <datalist id="regiaoo">
+                                    <option value="SÃO PAULO">
+                                    <option value="GUARULHOS">
+                                    <option value="FORTALEZA">
+                                </datalist>
+                            </div>
+                            
+                            <div class="input-list">
+                                <label for="desc">Descrição</label>
+                                 <span class=""><i class="bi bi-chat-square-text-fill desc"></i></span>
+                                <input list="text" id="desc"  name="desc" placeholder="Descreva oque foi feito no equipamento." required/>
+                                
+                            </div>
+
+                            <div class="input-list">
+                                <label for="date">Anexar Imagens</label>
+                                <span class="left-img"><i class="bi bi-image"></i></span>
+                                 <input type="file" style="width: 100%;">
+                            </div>
+                        </div>
+
+                       
+                        <div class="btn-enviar">
+                            
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <div class="teste">
+            <div class="title-cadastrados">
+                <h3>Equipamentos Cadastrados</h3>
+            </div>
+            <div class="update">
+                    <span id="update-time">Tabela atualizada agora pouco...</span>
+                </div>
+                <!--
+            <div class="modalRemover">
+                <div class="span-title">
+                    <span>Deseja realmente remover esse item?</span>
+                </div>
+                <div class="buttons">
+                    <button>Sim</button>
+                    <button>Não</button>
+                </div>
+            </div>
+
+            -->
+            <div class="table" id="table">
+                <table id="tabela-equip">
+                    <thead>
+                        <tr>
+                            <th>Equipamento</th>
+                            <th>MAC/SN</th>
+                            <th>Usuario</th>
+                            <th>Data de Registro</th>
+                            <th>Regiao</th>
+                            <th>Descrição</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+
+                
+            </div>
+        </div></th>
+                            
+    </section><!--FIM DA SESSAO-->
+
+    <!--SESSAO PARA CADASTRAR OS EQUIPAMENTOS-->
+    <!--SESSÃO PARA CADASTRAR LOTE POR CAIXA-->
+    <section class="sessao-equipamentos-lote" id="lote-box">
+        <div class="sessao-master">
+
+            <div class="title-primary">
+                <h3>Entradas em Lote</h3>
+                 <div class="register-equipamentos">
+                <h4>Registrar caixa de Equipamentos</h4>
+            </div>
+            </div>
+            
+           
+
+            <div class="bloco-primary">
+                <div class="bloco1">
+
+                    <div class="title1">
+                        <h3>Cadastro de Caixa</h3>
+                    </div>
+                    <div class="information">
+                        <p><i class="bi bi-exclamation-octagon-fill"></i>Preencha corretamente os campos abaixo para cadastrar o equipamento no sistema.</p>
+                    </div>
+                   
+
+                    <form id="formEquipamentosLote" autocomplete="off">
+                        <div class="input-group">
+
+                            <div class="input-list">
+                                <label>Codigo de caixa:</label>
+                               <span class="left-i-box"><i class="bi bi-box"></i></span>
+                                <input type="text" name="box" id="box" placeholder="00:00:00:00:00:00" maxlength="18" />
+                                
+                            </div>
+
+                            <div class="input-list">
+                                <label class="fabricante">Fabricante / Modelo:</label>
+                                <span class="left-i-top"><i class="bi bi-router-fill"></i></span>
+                                <input type="text" class="modelo"  id="modelbox" placeholder="Huawei / TP-LINK"  required/>
+                            </div>
+                            <div class="input-list">
+                                <label class="fabricante">Modelo:</label>
+                                <span class="left-i-top"><i class="bi bi-router-fill"></i></span>
+                                <input type="text" class="modelo"  id="modelbox" placeholder="Ex: HS8545M5 / EX141"  required/>
+                            </div>
+                            <div class="input-list">
+                                <label>Quantidade:</label>
+                                <span class="left-i-top"><i class="bi bi-router-fill"></i></span>
+                                <input type="text" id="quantimodel" placeholder="Huawei / Mercusys / Navigator"  required/>
+                            </div>
+
+                             <div class="input-list">
+                                <label for="date">Data de Entrada</label>
+                                <span class="left-i-data-equip"><i class="bi bi-calendar2-plus-fill" for="date"></i></span>
+                                <input type="date" id="boxentrada" name="date" class="date" required/>
+                            </div>
+                             <div class="input-list">
+                                <label for="date">Região / Estoque</label>
+                                 <span class="left-i-region-equip"><i class="bi bi-geo-alt-fill"></i></span>
+                                <input list="regiaoo" id="regiaobox"  name="regiao" placeholder="SP / GRU / FR" required/>
+                                <datalist id="regiaoo">
+                                    <option value="SÃO PAULO">
+                                    <option value="GUARULHOS">
+                                    <option value="FORTALEZA">
+                                </datalist>
+                            </div>
+                        </div>
+
+        
+
+                        <div class="btn-enviar">
+                            
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="teste">
+            <div class="title-cadastrados">
+                <h3>Equipamentos Cadastrados por Lote</h3>
+            </div>
+            <div class="update">
+                    <span id="update-time">Tabela atualizada agora pouco...</span>
+                </div>
+        
+            <div class="table" id="table">
+                <table id="tabela-equip-lote">
+                    <thead>
+                        <tr>
+                            <th>Caixa</th>
+                            <th>Fabricante</th>
+                            <th>Modelo</th>
+                            <th>Quantidade</th>
+                            <th>Data de entrada</th>
+                            <th>Região</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+
+                
+            </div>
+        </div></th>
+                            
+    </section><!--FIM DA SESSAO-->
+
+    <!--SESSÃO PARA CADASTRAR VEICULOS ABASTECIDOS PELOS TECNICOS-->
+    <section class="sessao-veiculos" id="sessao-veiculos">
+        <div class="sessao-master">
+
+            <div class="title-primary">
+                <h3>Cadastrar Veiculo</h3>
+            </div>
+
+            <div class="bloco-primary">
+                <div class="bloco1">
+
+                    <div class="title1">
+                        <h3>Controle de Abastecimentos</h3>
+           
+                    </div>
+
+                    <div class="information">
+                        <p><i class="bi bi-exclamation-octagon-fill"></i>Preencha corretamente os campos abaixo para cadastrar o relatorio no sistema.</p>
+                    </div>
+
+                    <form id="formVehicles" autocomplete="off">
+                        <div class="input-group">
+
+                            <div class="input-list">
+                                <label>CARRO:</label>
+                                <span class="left-i"><i class="bi bi-car-front-fill"></i></span>
+                                <input list="vehicless" id="carro" placeholder="Nome do veiculo"  required/>
+                                <datalist id="vehicless">
+                                    <option value="Montana">
+                                    <option value="UNO Moby">
+                                    <option value="UNO Vivace">
+                                </datalist>
+                            </div>
+
+                             <div class="input-list">
+                                <label for="date">Data de Registro:</label>
+                                <span class="left-i-top"><i class="bi bi-calendar2-plus-fill" for="date"></i></span>
+                                <input type="date" id="datee" name="date" class="date" required/>
+                            </div>
+
+                            <div class="input-list">
+                                <label>Tecnico(a):</label>
+                                <span class="left-i-user-abastecimento "><i class="bi bi-person-vcard-fill"></i></span>
+                                <input list="users-tec" id="user" placeholder="Ex: Pedro" required />
+                                <datalist id="users-tec">
+                                    <option value="Paulo">
+                                    <option value="Antunes">
+                                    <option value="Denilso">
+                                    <option value="Carlos">
+                                    <option value="Cleberson">
+                                    <option value="Daniel">
+                                    <option value="Marcos">
+                                </datalist>
+                            </div>
+
+                            <div class="input-list">
+                                <label>Observação:</label>
+                                <span class="left-i-observacao"><i class="bi bi-ev-station-fill"></i></span>
+                                <input list="observacao" id="observ" placeholder="Ex: Abastecimento" required />
+                                 <datalist id="observacao">
+                                    <option value="Abastecimento">
+                                    <option value="Manutenção">
+                                    <option value="Troca dos Pneus">
+                                    <option value="Troca do Oléo">
+                                </datalist>
+                            </div>
+
+                            <div class="input-list">
+                                <label>Valor R$</label>
+                                <span class="left-i-dolar"><i class="bi bi-currency-dollar"></i></span>
+                                <input type="text" id="valor" placeholder="Ex: R$100,00" required />
+                            </div>
+
+                        
+
+                            
+
+                        </div>
+
+                        <div class="btn-enviar">
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="teste2">
+            <div class="title-cadastrados">
+                <h3>Veiculos Abastecidos</h3>
+            </div>
+            <div class="update">
+                    <span id="update-time">Tabela atualizada agora pouco...</span>
+                </div>
+
+            <div class="table" id="table-car">
+                <table id="tabela-car">
+                    <thead>
+                        <tr>
+                            <th><i class="bi bi-car-front-fill" style="padding: 0.5rem;"></i>Carro</th>
+                            
+                            <th><i class="bi bi-calendar2-plus-fill" style="padding: 0.5rem;" for="date"></i>Data de Registro</th>
+                            <th><i class="bi bi-person-vcard-fill" style="padding: 0.5rem;"></i>Tecnico</th>
+                            <th><i class="bi bi-ev-station-fill" style="padding: 0.5rem;"></i>Observação</th>
+                            <th><i class="bi bi-currency-dollar" style="padding: 0.5rem;"></i> Valor</th>
+                            <th><i class="bi bi-play-circle-fill" style="padding: 0.5rem;"></i>Ação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!--STATUS SERVICE-->
+    <section class="sessao-services" id="sessao-services">
+        <div class="sessao-master">
+
+            <div class="title-primary">
+                <h3>Status Services</h3>
+            </div>
+         
+            
+        </div><!--fim bloco primary-->
+         <main id="grid">
+           
+
+            
+        </main>
+        
+    </section>
+
+
+
+
+    <section class="sessao-users" id="sessao-faqs">
+        <div class="sessao-master-faqs">
+
+            <div class="title-primary">
+                <h3>Tópicos de ajuda</h3>
+            </div>
+            <div class="information-topics">
+                <p><strong class="aspa">❝</strong> Esta seção foi criada para auxiliar tanto usuários iniciantes quanto usuários mais experientes que, em<br> algum momento, acabam esquecendo como realizar determinada tarefa.
+                <br>
+                <br>
+
+                Aqui você encontrará diversos tópicos de ajuda organizados de forma clara e objetiva, com o objetivo de facilitar a resolução de dúvidas e problemas do dia a dia.
+                <br>
+                <br>
+                Os conteúdos abordam diferentes sistemas e áreas, como <strong class="ixc">IXC</strong>, <strong class="acs">ACS</strong>, <strong class="erp">ERP</strong>, <strong class="opa">OPA</strong> e <strong class="olts">OLTs</strong>, trazendo<br> orientações práticas para tornar os processos mais simples e eficientes.
+                <br>
+                <br>
+                Alguns tópicos específicos, como os relacionados a <strong class="olts">OLTs</strong>, estarão disponíveis exclusivamente para<br> usuários do <strong class="noc">NOC</strong>, garantindo que cada perfil tenha acesso apenas às informações necessárias.
+                <br>
+                <br>
+                Utilize este painel sempre que precisar de suporte ou orientação. Ele foi desenvolvido para servir como<br> um apoio rápido e confiável no seu trabalho diário. <strong class="aspa">❞</strong></p>
+            </div>
+            <!--TESTE-->
+        <div class="sessao-plataforms">
+
+            <div class="title-primary">
+                <h3>Plataformas</h3>
+            </div>
+            <div class="box-plataform">
+
+                <div class="box-opa">
+                    
+                    <div class="opasuite">
+                        <img src="/wjinternet//opa.png">
+                        <h3>OPA SUITE</h3>
+                    </div>
+                    
+                 </div>
+            </div>
+
+            <div class="box-plataform">
+
+                <div class="box-opa">
+                    
+                    <div class="opasuite">
+                        <img src="/wjinternet//ixc.png">
+                    </div>
+                    <div class="title-opa">
+                        <h3>IXC SOFT</h3>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+
+
+            
+
+        <!--ERP-->    
+    </section>
+
+    
+
+    <section class="box-configs" id="box-configs">
+        <div class="box-user">
+            <h1 class="title-config-system">
+                Configurações do sistema
+            </h1>
+        </div>
+
+        <div class="box-nav">
+            <nav class="box-nav">
+                <ul>
+                    <li>
+                        <a href="#">Usuarios</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Versão</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sistema</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Equipamentos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="box-integration" id="box-integration">
+        <div class="box-user">
+            <h1 class="title-config-system">
+                Integrações
+            </h1>
+        </div>
+
+        <div class="box-nav">
+            
+        </div>
+    </section>
+
+    <section class="box-perfil" id="box-perfil">
+        <div class="box-user">
+            <h1 class="title-config-system">
+                Editar perfil de Usuario
+            </h1>
+        </div>
+
+        <div class="box-nav">
+            
+        </div>
+    </section>
+    </div>
+    <script src="/wjinternet/backend/chips.js"></script>
+    <script>
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+/** LAPTOP -L 1440px**/
+
+@media screen and (min-width: 1440px)
+{
+    .header-lateral{
+    width: 29vh;
+    }
+
+.teste{
+    margin-top: 5rem;
+}
+.bloco-primary{
+    position: relative;
+    margin-left: 10rem;
+}
+}
+
+
+@media screen and (min-width: 1024px)
+{
+    .header-lateral{
+    
+    }
+}

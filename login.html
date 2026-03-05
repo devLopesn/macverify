@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #030914;
+    
+
+
+  }
+  .opacity{
+    
+    background-image: url('/wjinternet/fundo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.4;
+  }
+  main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(9, 22, 49);
+    box-shadow: 1px 1px 50px #131330;
+    border-bottom: 0.2rem solid #182e55;
+    border-top: 0.2rem solid #182e55;
+    border-radius: 0.5rem;
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Poppins';
+    z-index: 1000;
+    opacity: 0.9;
+  }
+
+  .title strong {
+    color: #3359a1;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-group {
+    padding: 0.2rem;
+  }
+
+  .input-group input {
+    padding: 0.5rem 3rem;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.141);
+    border-radius: 0.2rem;
+    color: #969393;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .input-group input:focus {
+    outline: none;
+  }
+
+  .input-group span {
+    position: relative;
+    font-size: 1.3rem;
+    left: 5%;
+  }
+
+  .input-group span i {
+    position: absolute;
+    top: 10%;
+    color: #706e6e;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn button {
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(212, 212, 212, 0.141);
+    padding: 0.7rem 4rem;
+    ;
+    margin-top: 0.8rem;
+    background-color: #2b6de9;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .btn button:hover {
+    transition: .5s ease-in-out;
+    background-color: #3359a1;
+  }
+
+  .btn i {}
+
+  .esqueci {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .esqueci a {
+    color: #f9f9f9;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+  }
+
+  .ipshow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #2b6de9;
+  }
+</style>
+
+<body>
+  <div class="opacity"></div>
+  <main>
+    <div class="title">
+      <h1>LOGIN <strong class="mcv"> MCV</strong></h1>
+    </div>
+    <form>
+      <div class="input-list">
+        <div class="input-group">
+          <span>
+            <i class="bi bi-person-vcard-fill"></i>
+          </span>
+          <input type="text" name="user" id="user" placeholder="Ex: pedro123">
+        </div>
+
+        <div class="input-group">
+          <span>
+            <i class="bi bi-eye-slash"></i>
+          </span>
+          <input type="password" name="pass" id="pass" placeholder="********">
+        </div>
+
+        <div class="esqueci">
+          <a href="#">Esqueceu a senha? solicite ao administrador.</a>
+        </div>
+      </div>
+    </form>
+    <div class="btn">
+      <button id="btn" onclick="logar();">
+        Acessar<i class="bi bi-box-arrow-in-right"></i>
+      </button>
+    </div>
+
+    <div class="ipshow">
+      <p id="ip">Carregando IP...</p>
+    </div>
+  </main>
+  <script>
+    async function logar() {
+  const usuario = document.getElementById("user").value;
+  const senha = document.getElementById("pass").value;
+
+  try {
+    const res = await fetch('http://localhost:4000/login', {
+      method: 'POST',
+      headers: {
+            "Content-Type": "application/json",
+            "Authorization": localStorage.getItem('token'),
+              },
+      body: JSON.stringify({ usuario, senha })
+    });
+
+    const text = await res.text(); 
+
+    if (!text) {
+      throw new Error('Resposta vazia do servidor');
+    }
+
+    const data = JSON.parse(text);
+
+    if (!res.ok) {
+      throw new Error(data.erro || 'Erro no login');
+    }
+
+    if (data.sucesso) {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('nome', data.nome);
+      window.location.href = 'chips.html';
+    }
+  } catch (err) {
+    alert(err.message);
+    console.error(err);
+  }
+}
+
+
+
+
+    fetch("https://api.ipify.org?format=json")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("ip").innerText = 'IP: ' +data.ip;
+      })
+      .catch(() => {
+        document.getElementById("ip").innerText = "Não foi possivel localizar seu ip!";
+      })
+
+
+
+  </script>
+</body>
+
+</html>
