@@ -4,7 +4,7 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const db = require("./db");
 const crypto = require("crypto");
-const patch = require("patch")
+const path = require("path")
 
 const app = express();
 const SECRET = 'minha_chave_secreta';
