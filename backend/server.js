@@ -4,12 +4,21 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const db = require("./db");
 const crypto = require("crypto");
+const patch = require("patch")
 
 const app = express();
 const SECRET = 'minha_chave_secreta';
 
 app.use(cors());
 app.use(express.json());
+
+app.use(express.urlencoded({
+  extended: true
+}));
+
+app.use(express.static(patch.join(__dirname, "public")));
+
+
 
 
 //rota de teste para debugar
@@ -84,10 +93,10 @@ app.get("/ixc", auth, (req,res) =>{
   
 })
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log("Servidor online na porta " + PORT);
+  console.log("Servidor online");
 });
 
 

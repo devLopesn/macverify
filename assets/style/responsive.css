@@ -1,5 +1,49 @@
 /** LAPTOP -L 1440px**/
+@media screen and (min-width: 1280px)
+{
+    .header-lateral{
+        width: 27.5vh;
+    }
 
+    .version-pl{
+     
+        margin-top: 20rem;
+    }
+
+    .sessao-equipamentos .sessao-master .bloco-primary{
+       margin-left: 2.3rem;
+    }
+
+    .sessao-equipamentos-lote .sessao-master .bloco-primary{
+        width: 80vw;
+        margin-left: -7.6rem;
+    }
+
+    .sessao-equipamentos .sessao-master .teste{
+        margin-top: 15rem;
+    }
+}
+
+@media screen and (min-width: 1366px)
+{
+    .header-lateral{
+        width: 32vh;
+    }
+
+    .sessao-equipamentos .sessao-master .bloco-primary{
+       margin-left: 5rem;
+    }
+
+    .sessao-equipamentos-lote .sessao-master .bloco-primary{
+        width: 80vw;
+        margin-left: -5.1rem;
+    }
+
+    .version-pl{
+        margin-top: 15rem;
+    }
+
+}
 @media screen and (min-width: 1440px)
 {
     .header-lateral{
