@@ -1167,7 +1167,6 @@
             align-items: center;
             justify-content: center;
             gap:2rem;
-            flex-direction: ;
             grid-template-columns: 2fr 2fr;
         }
 
