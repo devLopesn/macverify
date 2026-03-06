@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const db = require("./db");
+const db = require("./backend/db");
 const crypto = require("crypto");
 const patch = require("patch")
 
